@@ -1,0 +1,371 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="28c9a45f-21b0-43c6-867b-f7bf2193de10" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Fact Booking</ID>
+  <Name>Fact Booking</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1715" scrolltop="1004" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="8742" y="11240" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="FactBooking" left="168" top="2583" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="5186" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00004214000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_FactBooking" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-1715</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>1004</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>168</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>2583</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="eacbec93-014e-4dc8-a2ae-93434b8c6742">
+    <DataSourceViewID>DSV_HotelBooking_DW</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="681dc472-be1f-473b-b360-4b8756b32cae">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="682df0a7-b8d5-4329-a0f8-01a367dcab26">
+      <ID>Booking ID</ID>
+      <Name>Booking ID</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4e7c97a7-22c5-4e9f-b99c-787c99c5e8a2">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="09c6eae3-e9c5-4f5a-998e-d4219ef6efdf">
+            <TableID>dbo_FactBooking</TableID>
+            <ColumnID>BookingID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="c548ce09-b6b6-4426-b7c4-884bb3939739">
+          <AttributeID>Deposit Type Key</AttributeID>
+          <Name>Deposit Type Key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="424e2a2a-e3cb-4265-9353-e2ec89d82c1d">
+          <AttributeID>Reserved Room Type Key</AttributeID>
+          <Name>Reserved Room Type Key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="b16e68f2-0ced-4692-bfb9-3c5f00f72671">
+          <AttributeID>Assigned Room Type Key</AttributeID>
+          <Name>Assigned Room Type Key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="e1c031d5-f442-4e7e-8200-f031cbf908f6">
+          <AttributeID>Hotel Key</AttributeID>
+          <Name>Hotel Key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="f5531579-8210-4a7b-8d2f-45e5ded67692">
+          <AttributeID>Customer Type Key</AttributeID>
+          <Name>Customer Type Key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="8b8cc178-0a0a-4453-a668-802092277d27">
+          <AttributeID>Meal Type Key</AttributeID>
+          <Name>Meal Type Key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="ac2a6775-9327-435f-88e4-e35482bac7e7">
+          <AttributeID>Reservation Status Date Key</AttributeID>
+          <Name>Reservation Status Date Key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="b6086083-ffd2-42bf-86aa-41ac9e977f33">
+          <AttributeID>Booking Date Key</AttributeID>
+          <Name>Booking Date Key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="38a3e162-c2ef-4d9b-8b9a-459db26d4746">
+          <AttributeID>Arrival Date Key</AttributeID>
+          <Name>Arrival Date Key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="ef174057-7faa-4b1a-90dc-cfc7b8d0a2d7">
+          <AttributeID>Customer Key</AttributeID>
+          <Name>Customer Key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="94d9ec9f-eb03-427d-93f2-69bded07bcb2">
+          <AttributeID>Reservation Status Key</AttributeID>
+          <Name>Reservation Status Key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="1443c909-9b25-448c-9a3d-458b13fcbcb5">
+          <AttributeID>Is Repeated Guest</AttributeID>
+          <Name>Is Repeated Guest</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="b5affdc2-fb7b-487a-b98a-bb6539e6e4ec">
+          <AttributeID>Is Canceled</AttributeID>
+          <Name>Is Canceled</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="278c5304-25fa-42b8-9f6f-749a11cc3e34">
+      <ID>Deposit Type Key</ID>
+      <Name>Deposit Type Key</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8c4130db-dcd2-4edf-9347-d32d9269eeaa">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="dc63502b-a303-478d-ba2e-24df51681369">
+            <TableID>dbo_FactBooking</TableID>
+            <ColumnID>DepositTypeKey</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="4ec994cf-35a7-44d1-8c9f-e44fedde88ae">
+      <ID>Reserved Room Type Key</ID>
+      <Name>Reserved Room Type Key</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c566c3f7-eeaf-46ca-8f30-082f29276c1d">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="09789662-6673-4f48-bd0c-b057a88e78d9">
+            <TableID>dbo_FactBooking</TableID>
+            <ColumnID>ReservedRoomTypeKey</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="7d47b3ca-ff10-43e1-b9b5-34cb03378b5e">
+      <ID>Assigned Room Type Key</ID>
+      <Name>Assigned Room Type Key</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c32d1ebb-02c4-4664-8846-cbdcadea9862">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="14322bfe-3bef-492e-bb00-ef312996d0bb">
+            <TableID>dbo_FactBooking</TableID>
+            <ColumnID>AssignedRoomTypeKey</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="9bb87279-6818-48e4-b281-376320b662ab">
+      <ID>Hotel Key</ID>
+      <Name>Hotel Key</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1f9616a6-bac1-4fa3-a95c-8d9190400d07">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="936f8138-3116-4068-9e0b-52e36c208500">
+            <TableID>dbo_FactBooking</TableID>
+            <ColumnID>HotelKey</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="d8df8286-5842-4749-b0c8-742583aa51a1">
+      <ID>Customer Type Key</ID>
+      <Name>Customer Type Key</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="94f33071-a57e-40e9-a4c4-8c1a0601467f">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8c91577a-684c-46c9-976a-f3131c66aff9">
+            <TableID>dbo_FactBooking</TableID>
+            <ColumnID>CustomerTypeKey</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="ff4d6e21-0560-4122-b4ca-c6f20639fc19">
+      <ID>Meal Type Key</ID>
+      <Name>Meal Type Key</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ed77577b-bff0-4fc3-aaae-7b4670c97f46">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="bdedb6a9-554b-40e2-82cc-961267d27b6d">
+            <TableID>dbo_FactBooking</TableID>
+            <ColumnID>MealTypeKey</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="9c4cf6f0-fc64-4705-9aac-5bebfeaf1af5">
+      <ID>Reservation Status Date Key</ID>
+      <Name>Reservation Status Date Key</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="2fe7300a-9b0c-40ea-a35d-614577398488">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a879901d-6705-4c2a-97e6-87e1c7a56fb8">
+            <TableID>dbo_FactBooking</TableID>
+            <ColumnID>ReservationStatusDateKey</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="912a51a9-6ac2-45ff-950e-1cdfe7997794">
+      <ID>Booking Date Key</ID>
+      <Name>Booking Date Key</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="47ab758f-7284-47c4-a3c9-b3b579cb4786">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="678f52cc-7bf3-4131-9daa-dae52e59f59a">
+            <TableID>dbo_FactBooking</TableID>
+            <ColumnID>BookingDateKey</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="6736d6d7-cf54-4f79-ac15-40b840a93988">
+      <ID>Arrival Date Key</ID>
+      <Name>Arrival Date Key</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b643791b-8021-4c11-a229-105313cca5a2">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9dd1a3cd-d3e8-4215-9379-16b69628752e">
+            <TableID>dbo_FactBooking</TableID>
+            <ColumnID>ArrivalDateKey</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="ef429c34-0292-4e63-a870-fe63065c68b2">
+      <ID>Customer Key</ID>
+      <Name>Customer Key</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="99024624-cb1e-43d7-a08b-1c20b4620b79">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="de057625-6539-497b-8559-aabda949966a">
+            <TableID>dbo_FactBooking</TableID>
+            <ColumnID>CustomerKey</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="064c32f0-6b63-4065-8789-8d01d04d91d7">
+      <ID>Reservation Status Key</ID>
+      <Name>Reservation Status Key</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c2a2ab24-8cb5-47bf-9501-e6c8f3406e41">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="767d2a96-c196-4420-ae33-87116c8105f1">
+            <TableID>dbo_FactBooking</TableID>
+            <ColumnID>ReservationStatusKey</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e16f1c47-5f71-4201-b71d-2a847e309c03">
+      <ID>Is Repeated Guest</ID>
+      <Name>Is Repeated Guest</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5dc2701b-d08d-4cf5-b42f-14d33afa236f">
+          <DataType>Boolean</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4bf06fa0-a2ea-422f-8435-4ead93d70a61">
+            <TableID>dbo_FactBooking</TableID>
+            <ColumnID>IsRepeatedGuest</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="95a6a56a-6b65-45f1-9ec3-20017cd611c3">
+      <ID>Is Canceled</ID>
+      <Name>Is Canceled</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="57591baf-2184-4abd-96da-e4555dd0871a">
+          <DataType>Boolean</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2edbe9d0-fb29-49a1-87d6-185d84b24cfa">
+            <TableID>dbo_FactBooking</TableID>
+            <ColumnID>IsCanceled</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>
